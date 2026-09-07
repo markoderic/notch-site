@@ -22,7 +22,7 @@
   <div class="updated">Last updated September 2026</div>
 
   <h2>The short version</h2>
-  <p>Notch does not collect anything you put in your planner. Your tasks, grades, money, notes, photos and health stay on your iPhone, and we never see them — there is no Notch account, no ads, and no tracking of you across apps or websites. The one thing that leaves your phone is the purchase itself, if you buy Pro: Apple handles the sale and reports it to a service that tells us how the app is selling. That is described below, and it never includes anything from your planner.</p>
+  <p>Notch does not collect anything you put in your planner. There is no Notch account, no ads, and no tracking across apps or websites. Your planner is stored on your device. Purchase reporting and the optional services described below make network requests. They do not give the developer access to your planner.</p>
 
   <h2>Google user data (Mail and Google Calendar)</h2>
   <p>You can optionally connect a Google account so Notch can show your inbox and mirror your Google Calendar. This is what happens, completely and exactly:</p>
@@ -37,10 +37,13 @@
   <p>Tasks, habits, finances, classes, reminders, notes, photos, workouts, trips and everything else you add are stored in files on your device, readable only by the app. We (the developer) have no access to them, ever.</p>
 
   <h2>Weather</h2>
-  <p>If the dashboard weather is on, Notch asks for your approximate location and sends only rounded coordinates — no identifiers, no account, nothing else — to the Open-Meteo forecast service to fetch local conditions. This is the app's only network request, and you can turn it off in Settings at any time.</p>
+  <p>If dashboard weather is on, Notch sends rounded coordinates to Open-Meteo to fetch local conditions. The service also receives normal network request information, including your IP address. You can turn weather off in Settings.</p>
+
+  <h2>Other optional services</h2>
+  <p>Place search in Travel uses Apple Maps. Changing currency fetches an exchange rate. If you turn on iPhone Calendar sharing, the items you choose are sent to the Calendar app and may sync with its accounts. These services receive the information needed for the feature you choose; none receives your whole planner.</p>
 
   <h2>Purchases</h2>
-  <p>Notch Pro is bought and managed through Apple. When you start a trial, buy, renew, cancel or ask for a refund, Apple's record of that transaction also goes to RevenueCat, a service that reports how the app is selling. It receives which plan, when, and whether it is still active, together with a random id made on your device. It never receives your name, your email, or anything from your planner, and nothing connects that id back to you.</p>
+  <p>Notch Pro is bought and managed through Apple. RevenueCat receives purchase history for app functionality and sales analytics, including the plan, dates and status. Its SDK connects when Notch opens, even before a purchase, using a random app user id and technical request metadata such as app and system versions, locale, storefront and an Apple vendor device identifier. Notch does not send it your name, email, advertising identifier, or any planner content, and does not connect its random id to a Notch account or identity. Purchase history is not used for tracking across apps or websites.</p>
 
   <h2>Face ID</h2>
   <p>The optional app lock uses Apple's on-device Face ID / passcode verification. Notch never sees or stores biometric data — Apple's system only tells the app "unlocked" or "not."</p>
@@ -55,7 +58,7 @@
   <p>Notch keeps automatic daily backups on your device, and export creates a file you control. Where you save or send it is up to you.</p>
 
   <h2>Deleting your data</h2>
-  <p>Settings &rarr; Erase all data removes everything instantly. Deleting the app does the same.</p>
+  <p>Settings → Erase all data clears the live planner and local note photos. Automatic backup files are retained so you can recover your planner; delete them separately in More → Data. Backups contain planner records but do not embed note photos. Exported files, system backups, purchases and copies shared to other services are not deleted by this action.</p>
 
   <h2>Contact</h2>
   <p>Questions? Email <a href="mailto:notchsupport@gmail.com">notchsupport@gmail.com</a>.</p>
